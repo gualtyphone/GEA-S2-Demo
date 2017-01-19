@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rapid Prototyping.Plugins", "Rapid Prototyping.Plugins.csproj", "{CEE7D9BB-5A98-BF45-2A8C-0975FA0312F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rapid Prototyping", "Rapid Prototyping.csproj", "{0E2E21EB-C5D5-4314-A4D7-16426850A7F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rapid Prototyping.Editor", "Rapid Prototyping.Editor.csproj", "{45DB5F47-DD20-9B79-8A32-03F53AB5B2C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEE7D9BB-5A98-BF45-2A8C-0975FA0312F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE7D9BB-5A98-BF45-2A8C-0975FA0312F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE7D9BB-5A98-BF45-2A8C-0975FA0312F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE7D9BB-5A98-BF45-2A8C-0975FA0312F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2E21EB-C5D5-4314-A4D7-16426850A7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2E21EB-C5D5-4314-A4D7-16426850A7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2E21EB-C5D5-4314-A4D7-16426850A7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2E21EB-C5D5-4314-A4D7-16426850A7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DB5F47-DD20-9B79-8A32-03F53AB5B2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DB5F47-DD20-9B79-8A32-03F53AB5B2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DB5F47-DD20-9B79-8A32-03F53AB5B2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DB5F47-DD20-9B79-8A32-03F53AB5B2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
