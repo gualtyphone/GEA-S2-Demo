@@ -3,7 +3,8 @@ using System.Collections;
 
 public class conveyorPlatform : MonoBehaviour {
 
-    ArrayList go = new ArrayList();
+	public float horMov = 0;
+	public float verMov = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -13,19 +14,16 @@ public class conveyorPlatform : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < go.Count; i++)
-        {
-            GameObject obj  = (GameObject) go[i];
-            //obj.transform.position = 
-        }
+
     }
 
-    void OnCollisionEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-         go.Add(other.gameObject);
-    }
-    void OnCollisionExit2D(Collider2D other)
-    {
-        go.Remove(other.gameObject);
+		GameObject obj = other.gameObject;
+		obj.transform.position = Vector3.Lerp(obj.transform.position, 
+												new Vector3(obj.transform.position.x + horMov, 
+															obj.transform.position.y + verMov, 
+															obj.transform.position.z), 0.1f);
+		//obj.transform.position = new Vector3(obj.transform.position.x + horMov, obj.transform.position.y + verMov, obj.transform.position.z);
     }
 }
