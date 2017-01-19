@@ -45,14 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BugsCollector.cs" />
-     <Compile Include="Assets\Collectible.cs" />
-     <Compile Include="Assets\Door.cs" />
-     <Compile Include="Assets\EnemyMovement.cs" />
-     <Compile Include="Assets\Lives.cs" />
-     <Compile Include="Assets\PlatformMoving.cs" />
-     <Compile Include="Assets\conveyorPlatform.cs" />
-     <Compile Include="Assets\followCamera.cs" />
+     <Compile Include="Assets\Scripts\BugsCollector.cs" />
+     <Compile Include="Assets\Scripts\Collectible.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Lives.cs" />
+     <Compile Include="Assets\Scripts\PlatformMoving.cs" />
+     <Compile Include="Assets\Scripts\conveyorPlatform.cs" />
+     <Compile Include="Assets\Scripts\followCamera.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
