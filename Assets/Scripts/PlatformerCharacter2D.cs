@@ -25,6 +25,7 @@ namespace UnityStandardAssets._2D
         public Text livesText;
         private int playerLives = 3;
 		public bool m_jump = false;
+		public bool m_noJump = false;
 
         public GameObject plat;
 
@@ -89,6 +90,11 @@ namespace UnityStandardAssets._2D
 			if (m_jump){
 				jump = true;
 				m_jump = false;
+			}
+
+			if (m_noJump && jump){
+				jump = false;
+				m_noJump = false;
 			}
 
             // If crouching, check to see if the character can stand up
