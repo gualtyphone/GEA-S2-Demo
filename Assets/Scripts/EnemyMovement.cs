@@ -3,26 +3,29 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour {
-    public GameObject movingTo;
-    public float speed = 0.1f;
+    public int movingTo;
+	public Vector3[] positions;
+    public float speed = 1;
+
+
 	// Use this for initialization
 	void Start () {
-        movingTo = this.transform.parent.FindChild("WP1").gameObject;
+		movingTo = 0;
+		if (positions[0] == null){
+			positions[0] = this.transform.position;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.position = Vector3.Lerp(transform.position, movingTo.transform.position, speed);
+		this.transform.position = Vector3.MoveTowards(transform.position, positions[movingTo], speed*Time.deltaTime);
 
-        if (Vector3.Distance( transform.position, movingTo.transform.position) < speed)
-        {
-            if (movingTo.name == "WP1")
-            {
-                movingTo = this.transform.parent.FindChild("WP2").gameObject;
-            } else
-            {
-                movingTo = this.transform.parent.FindChild("WP1").gameObject;
-            }
+		if (Vector3.Distance( transform.position, positions[movingTo]) < speed*Time.deltaTime)
+		{
+			movingTo++;
+			if (movingTo >= positions.Length){
+				movingTo = 0;
+			}
         }
 	}
 
@@ -30,7 +33,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(0);
-        }
+			HealthController.Instance.killPlayer();
+		}
     }
 }

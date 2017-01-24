@@ -16,8 +16,15 @@ public class Collectible : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            GameObject.Destroy(this.gameObject);
-            GameObject.Find("Player").GetComponent<BugsCollector>().collectedBugs++;
+			GameObject.Destroy(this.gameObject);
+			switch(this.gameObject.name){
+			case "BUG":
+            	GameObject.Find("Player").GetComponent<BugsCollector>().collectedBugs++;
+				break;
+			case "Life":
+				HealthController.Instance.addLives(1);
+				break;
+			}
         }
     }
 }
