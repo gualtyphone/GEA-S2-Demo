@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CheckPointScript.cs" />
+     <Compile Include="Assets\QuickSandScript.cs" />
      <Compile Include="Assets\Scripts\BugsCollector.cs" />
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -62,6 +64,7 @@
      <Compile Include="Assets\Scripts\conveyorPlatform.cs" />
      <Compile Include="Assets\Scripts\followCamera.cs" />
      <Compile Include="Assets\Scripts\speedPlatform.cs" />
+     <Compile Include="Assets\Speed_PowerUP.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

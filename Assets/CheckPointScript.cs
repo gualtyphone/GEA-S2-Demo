@@ -13,9 +13,9 @@ public class CheckPointScript : MonoBehaviour {
 
     }
 
-    void onTriggerEnter() {
+	void OnTriggerEnter2D(Collider2D other) {
 
-        HealthController.Instance.setRespawnPosition(transform.position);
+        HealthController.Instance.setRespawnPosition(this.transform.position);
 
     }
 

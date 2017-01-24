@@ -9,7 +9,7 @@ public class HealthController : MonoBehaviour {
 	public Text livesText;
 	private bool invincible;
 
-	public GameObject startPoint;
+	public Vector3 startPoint;
 
 	public GameObject deathScreen;
 
@@ -29,9 +29,10 @@ public class HealthController : MonoBehaviour {
 		lives = 3;
 		livesText = GameObject.Find("Lives Text").GetComponent<Text>();
 		invincible = false;
-		startPoint = GameObject.Find("PlayerStartingPoint");
+		//startPoint = GameObject.Find("PlayerStartingPoint");
 		deathScreen = GameObject.Find("DeathScreen");
 		deathScreen.SetActive(false);
+		startPoint = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -45,11 +46,11 @@ public class HealthController : MonoBehaviour {
 			//Add death animation
 			StartCoroutine("DeathAnim");
 			lives--;
-			transform.position = startPoint.transform.position;
+			transform.position = startPoint;
 			if (lives <= 0){
 				SceneManager.LoadSceneAsync(0);
 			}
-			StartCoroutine("Invincible");
+			StartCoroutine("Invincible", 0.1f);
 		}
 	}
 
@@ -60,22 +61,26 @@ public class HealthController : MonoBehaviour {
 	IEnumerator DeathAnim() {
 		deathScreen.SetActive(true);
 		//Time.timeScale = 0.0f;
-		GetComponent<PlatformerCharacter2D>().enabled = false;
+		//GetComponent<PlatformerCharacter2D>().enabled = false;
 		yield return new WaitForSeconds(1.0f);
 		deathScreen.SetActive(false);
-		GetComponent<PlatformerCharacter2D>().enabled = true;
+		//GetComponent<PlatformerCharacter2D>().enabled = true;
 		//Time.timeScale = 1.0f;
 
 	}
 
-	IEnumerator Invincible() {
+	IEnumerator Invincible(float _time) {
 		invincible = true;
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(_time);
 		invincible = false;
 		yield return false;
 	}
 
-	void setRespawnPosition(Vector3 _position){
-		startPoint.transform.position = _position;
+	public void setRespawnPosition(Vector3 _position){
+		startPoint = _position;
+	}
+
+	public void setInvincibleForTime(float _time){
+		StartCoroutine("Invincible", _time);
 	}
 }
