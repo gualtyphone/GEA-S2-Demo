@@ -116,7 +116,7 @@ namespace UnityStandardAssets._2D
                 // Reduce the speed if crouching by the crouchSpeed multiplier
                 move = (crouch ? move * m_CrouchSpeed : move);
 
-                if (plat.transform.parent.GetComponent<speedPlatform>()) { 
+                if (plat.transform.parent.GetComponent<speedPlatform>()!= null) { 
                     //Debug.Log(plat.name);
                     move = plat.transform.parent.GetComponent<speedPlatform>().speed * move;
                 }
