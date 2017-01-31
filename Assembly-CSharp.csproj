@@ -45,26 +45,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CheckPointScript.cs" />
-     <Compile Include="Assets\QuickSandScript.cs" />
      <Compile Include="Assets\Scripts\BugsCollector.cs" />
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CheckPointScript.cs" />
      <Compile Include="Assets\Scripts\Collectible.cs" />
+     <Compile Include="Assets\Scripts\DemoScreenScript.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\HealthController.cs" />
+     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlatformMoving.cs" />
      <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
      <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\QuickSandScript.cs" />
      <Compile Include="Assets\Scripts\Restarter.cs" />
+     <Compile Include="Assets\Scripts\Speed_PowerUP.cs" />
      <Compile Include="Assets\Scripts\StickyPlatform.cs" />
      <Compile Include="Assets\Scripts\Trampoline.cs" />
      <Compile Include="Assets\Scripts\conveyorPlatform.cs" />
      <Compile Include="Assets\Scripts\followCamera.cs" />
+     <Compile Include="Assets\Scripts\scroll.cs" />
      <Compile Include="Assets\Scripts\speedPlatform.cs" />
-     <Compile Include="Assets\Speed_PowerUP.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
